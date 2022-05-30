@@ -1,4 +1,8 @@
 spring:
+  cache:
+    # ehcache
+    ehcache:
+      config: classpath:config/ehcache.xml
   profiles:
     active: dev
   datasource:
@@ -67,3 +71,6 @@ mapper:
   mappers: cn.lijunhaoit.myblog.base.BaseMapper
   not-empty: false
   i-d-e-n-t-i-t-y: MYSQL
+
+
+

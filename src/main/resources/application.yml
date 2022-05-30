@@ -67,3 +67,6 @@ mapper:
   mappers: cn.lijunhaoit.myblog.base.BaseMapper
   not-empty: false
   i-d-e-n-t-i-t-y: MYSQL
+
+
+

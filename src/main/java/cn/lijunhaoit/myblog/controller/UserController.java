@@ -34,6 +34,12 @@ public class UserController {
 //        return userService.getUsers();
     }
 
+    @GetMapping("/user/del/{id}")
+    public String delUser(@PathVariable("id") Long id){
+        userService.evictUser(id);
+        return "删除成功";
+    }
+
     @GetMapping("/user/{id}")
     public User selectUserById(@PathVariable("id") Long id){
         return userService.selectById(id);
