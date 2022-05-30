@@ -1,8 +1,4 @@
 spring:
-  cache:
-    # ehcache
-    ehcache:
-      config: classpath:config/ehcache.xml
   profiles:
     active: dev
   datasource:
@@ -45,6 +41,11 @@ spring:
       stat-view-servlet:
         login-username: admin
         login-password: admin
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      schema: classpath:schema/tables_mysql.sql
 #      web-stat-filter:
 #        exclusions: *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*
 #    url: jdbc:mysql://127.0.0.1:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false
