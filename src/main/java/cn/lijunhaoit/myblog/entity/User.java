@@ -1,6 +1,11 @@
 package cn.lijunhaoit.myblog.entity;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name = "tbl_user")
 public class User {
+    @Id
     private Long userId;
     private String userName;
     private Integer userAge;

@@ -17,4 +17,8 @@ public class UserService {
     public List<User> getUsers() {
         return userMapper.getUsers();
     }
+
+    public User selectById(Long id){
+        return userMapper.selectByPrimaryKey(id);
+    }
 }
